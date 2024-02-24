@@ -122,6 +122,8 @@ header > h1 {
 
 .resultBox > p {
   color: #495057;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .btnCopiar {
@@ -191,7 +193,7 @@ footer a {
   }
 
   .resultBox {
-    max-width: 480px;
+    width: 480px;
   }
 
   .resultBox > img {
