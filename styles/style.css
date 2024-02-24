@@ -1,0 +1,200 @@
+/* global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* body styles */
+body {
+  background-color: #f3f5fc;
+  display: grid;
+  gap: 20px;
+}
+
+/* header styles */
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  gap: 30px;
+}
+
+header > img {
+  width: 20px;
+}
+
+header > h1 {
+  font-size: 20px;
+  color: #0a3871;
+  font-weight: 600;
+}
+
+.content {
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contentInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.title {
+  color: #0a3871;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.inputText {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.buttonBox {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 332px));
+  place-content: center;
+}
+
+.btnEncriptar {
+  background-color: #0a3871;
+  color: #fff;
+  padding: 15px 0px;
+  border-radius: 15px;
+  width: 100%;
+  font-size: 16px;
+  transition: ease-in 0.1s;
+  cursor: pointer;
+}
+
+.btnDesencriptar,
+.btnCopiar {
+  padding: 15px 0px;
+  border: 1px solid #0a3871;
+  color: #0a3871;
+  border-radius: 15px;
+  background-color: transparent;
+  width: 100%;
+  font-size: 16px;
+  transition: ease-in 0.1s;
+  cursor: pointer;
+}
+
+.btnEncriptar:hover,
+.btnDesencriptar:hover,
+.btnCopiar:hover {
+  transform: scale(1.05);
+}
+
+.resultBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 32px;
+  text-align: center;
+}
+
+.resultBox > img {
+  display: none;
+  width: 336px;
+}
+
+.resultBox > h2 {
+  color: #343a40;
+}
+
+.resultBox > p {
+  color: #495057;
+}
+
+.btnCopiar {
+  display: none;
+  width: auto;
+  padding: 15px 10px;
+}
+
+footer {
+  background-color: #0a3871;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 200;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+}
+
+@media (width >= 768px) {
+  header {
+    justify-content: left;
+    gap: 30px;
+  }
+  .content {
+    padding: 0px 30px;
+  }
+  .title,
+  .resultBox > h2 {
+    font-size: 26px;
+  }
+  .inputText,
+  .resultBox > p,
+  footer {
+    font-size: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .content {
+    padding: 0px 80px;
+  }
+}
+
+@media (width >= 1440px) {
+  .content {
+    flex-direction: row;
+    justify-content: center;
+    height: 81dvh;
+  }
+
+  .contentInput {
+    width: 70%;
+  }
+
+  .buttonBox {
+    margin: 40px 0px 0px 0px;
+  }
+
+  .contentInput {
+    max-width: 800px;
+  }
+
+  .resultBox {
+    max-width: 480px;
+  }
+
+  .resultBox > img {
+    display: block;
+  }
+}
